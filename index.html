@@ -7,23 +7,60 @@
     <meta name="description" content="A personal website for Luke Joyce, a data engineer based in Dublin." />
     <link rel="stylesheet" type="text/css" href="main.css" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <title>Luke Joyce</title>
+    <title>Luke Joyce</title>
+    <style>
+        /* CSS to stack form boxes vertically */
+        .form-box {
+            margin-bottom: 20px;
+        }
+        .form-box label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-box input[type="text"],
+        .form-box input[type="email"],
+        .form-box textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .profile-photo {
+            display: block;
+            max-width: 200px; /* Adjust width as needed */
+            height: auto;
+            border-radius: 50%; /* Optional: Round the corners for a more professional look */
+            margin: 20px auto; /* Center the photo and add space around it */
+        }
+    </style>
 </head>
 
 <body>
     <header>
+        <img src="your_photo.jpeg" alt="Luke Joyce - Data Engineer" class="profile-photo">
         <h1>Luke Joyce</h1>
     </header>
 
     <main>
         <article>
             <p>
-                I am currently working as a data engineer with Bank of Ireland in Dublin. I studied bioinformatics and computational biology in UCC and graduated in 2024.
+                Hello and welcome to my personal website! I am currently working as a data engineer and have a background in bioinformatics.
             </p>
         </article>
 
         <article>
-            <h2>Links</h2>
+            <p>
+                I am fascinated by the intersection of biology and technology. During my time studying bioinformatics at UCC, I delved into genetic data analysis and virtual drug screening, where I developed a strong foundation in computational biology and statistics.
+            </p>
+        </article>
+
+        <article>
+            <p>
+                As my career progressed, I transitioned into the field of data engineering, where I leverage my expertise in handling large-scale data, designing robust data pipelines, and implementing data-driven solutions. My passion lies in harnessing the power of data to unlock new discoveries and drive innovation in healthcare and life sciences.
+            </p>
+        </article>
+
+        <article>
+            <h2>Links to social media</h2>
             <ul>
                 <li><a rel="me" href="https://www.facebook.com/luke.joyce.14">Facebook</a></li>
                 <li><a rel="me" href="https://www.instagram.com/joyce__luke">Instagram</a></li>
@@ -31,6 +68,37 @@
                 <li><a rel="me" href="https://github.com/lukeJjoyce">GitHub</a></li>
             </ul>
         </article>
+
+        <article>
+            <h2>Contact me</h2>
+            <div class="form-box">
+                <form action="mailto:joycelu@tcd.ie" method="post" enctype="text/plain">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </form>
+            </div>
+
+            <div class="form-box">
+                <form action="mailto:joycelu@tcd.ie" method="post" enctype="text/plain">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </form>
+            </div>
+
+            <div class="form-box">
+                <form action="mailto:joycelu@tcd.ie" method="post" enctype="text/plain">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </form>
+            </div>
+
+            <div class="form-box">
+                <form action="mailto:joycelu@tcd.ie" method="post" enctype="text/plain">
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </article>
     </main>
 
 </html>
+
