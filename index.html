@@ -3,141 +3,191 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="A personal website for Luke Joyce, a data engineer based in Dublin." />
+
+    <!-- SEO -->
+    <title>Luke Joyce | Data Engineer</title>
+    <meta name="description" content="Luke Joyce — Data engineer with a background in bioinformatics, working at Bank of Ireland." />
+    <meta name="keywords" content="Data Engineer, Bioinformatics, Healthcare Data, Python, ETL, SQL" />
+
+    <!-- Open Graph (LinkedIn previews) -->
+    <meta property="og:title" content="Luke Joyce — Data Engineer" />
+    <meta property="og:description" content="Data engineer with a background in bioinformatics." />
+
     <link rel="stylesheet" type="text/css" href="main.css" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <title>Luke Joyce</title>
+
     <style>
-        /* CSS to stack form boxes vertically */
-        .form-box {
-            margin-bottom: 20px;
-        }
-        .form-box label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        .form-box input[type="text"],
-        .form-box input[type="email"],
-        .form-box textarea {
-            width: 100%;
-            padding: 10px;
-            box-sizing: border-box;
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
             color: #333;
         }
+
+        header {
+            text-align: center;
+            padding: 40px 20px 20px;
+        }
+
+        h1 {
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            margin-top: 40px;
+        }
+
+        .tagline {
+            font-weight: 500;
+            color: #555;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        article {
+            margin-bottom: 30px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
         .profile-photo {
             display: block;
-            max-width: 200px; /* Adjust width as needed */
+            max-width: 180px;
             height: auto;
-            border-radius: 50%; /* Optional: Round the corners for a more professional look */
-            margin: 20px auto; /* Center the photo and add space around it */
+            border-radius: 50%;
+            margin: 0 auto 20px;
         }
-        
-        /* General styling for form */
+
+        /* Form styling */
         form {
-            max-width: 600px; /* Adjust as per your layout */
+            max-width: 600px;
             margin: 0 auto;
             padding: 20px;
             background-color: #f9f9f9;
             border: 1px solid #ddd;
             border-radius: 8px;
         }
-        
-        /* Style for form labels */
+
         form label {
             display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-            color: #333;
+            margin-bottom: 6px;
+            font-weight: 600;
         }
-        
-        /* Style for form inputs and textarea */
-        form input[type="text"],
-        form input[type="email"],
+
+        form input,
         form textarea {
-            width: calc(100% - 20px); /* Adjust for padding */
+            width: 100%;
             padding: 10px;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             border: 1px solid #ccc;
             border-radius: 4px;
             font-size: 16px;
             box-sizing: border-box;
         }
-        
-        /* Style for submit button */
+
         form input[type="submit"] {
-            width: 100%;
-            padding: 12px;
+            background-color: #007bff;
+            color: #fff;
             border: none;
-            background-color: #007bff; /* Adjust to your preferred color scheme */
-            color: white;
             cursor: pointer;
-            border-radius: 4px;
-            font-size: 16px;
-            font-weight: bold;
+            font-weight: 600;
         }
-        
-        /* Style for submit button on hover */
+
         form input[type="submit"]:hover {
-            background-color: #0056b3; /* Darker shade when hovered */
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
+
 <body>
-    <header>
-        <img src="your_photo.jpeg" alt="Luke Joyce - Data Engineer" class="profile-photo">
-        <h1>Luke Joyce</h1>
-    </header>
-    <main>
-        <article>
-            <p>
-                Hello and welcome to my personal website! I am currently working as a data engineer and have a background in bioinformatics.
-            </p>
-        </article>
-        <article>
-            <p>
-                I am fascinated by the intersection of biology and technology. During my time studying bioinformatics at UCC, I delved into genetic data analysis and virtual drug screening, where I developed a strong foundation in computational biology and statistics.
-            </p>
-        </article>
-        <article>
-            <p>
-                As my career progressed, I transitioned into the field of data engineering, where I leverage my expertise in handling large-scale data, designing robust data pipelines, and implementing data-driven solutions. My passion lies in harnessing the power of data to unlock new discoveries and drive innovation in healthcare and life sciences.
-            </p>
-        </article>
-        <article>
-            <h2>Links to social media</h2>
-            <ul>
-                <li><a rel="me" href="https://www.facebook.com/luke.joyce.14">Facebook</a></li>
-                <li><a rel="me" href="https://www.instagram.com/joyce__luke">Instagram</a></li>
-                <li><a rel="me" href="https://www.linkedin.com/in/joyce-luke">LinkedIn</a></li>
-                <li><a rel="me" href="https://github.com/lukeJjoyce">GitHub</a></li>
-            </ul>
-        </article>
-        <article>
-            <h2>Published Academic Publication</h2>
-            <h3>A systematic computational analysis of the endosomal recycling pathway in glioblastoma</h3>
-            <p><strong>Authors:</strong> Luke J. Joyce, Andrew J. Lindsay</p>
-            <p><strong>Abstract:</strong> Glioblastoma (GBM) is the most common and aggressive brain cancer in adults. The standard treatment is brutal and has changed little in 20 years, and more than 85% of patients will die within two years of their diagnosis. There is thus an urgent need to identify new drug targets and develop novel therapeutic strategies to increase survival and improve quality of life. Using publicly available genomics, transcriptomics and proteomics datasets, we compared the expression of endosomal recycling pathway regulators in non-tumour brain tissue with their expression in GBM. We found that key regulators of this pathway are dysregulated in GBM and their expression levels can be linked to survival outcomes. Further analysis of the differentially expressed endosomal recycling regulators allowed us to generate an 8-gene prognostic signature that can distinguish low-risk from high-risk GBM and potentially identify tumours that may benefit from treatment with endosomal recycling inhibitors. This study presents the first systematic analysis of the endosomal recycling pathway in glioblastoma and suggests it could be a promising target for the development of novel therapies and therapeutic strategies to improve outcomes for patients.</p>
-            <p><strong>Journal:</strong> Biochemistry and Biophysics Reports</p>
-            <p><strong>Publication Date:</strong> April 2024</p>
-            <p><strong>DOI:</strong> <a href="https://doi.org/10.1016/j.bbrep.2024.101700" target="_blank">DOI Number</a></p>
-            <p><strong>Direct Link:</strong> <a href="https://authors.elsevier.com/sd/article/S2405-5808(24)00064-5" target="_blank">View Article on Elsevier</a></p>
-        </article>
+<header>
+    <img src="luke.jpg" alt="Portrait photo of Luke Joyce" class="profile-photo">
+    <h1>Luke Joyce</h1>
+    <p class="tagline">Data Engineer | Bioinformatics Background | Healthcare & Life Sciences</p>
+</header>
 
-        <article>
-            <h2>Contact me</h2>
-            <form action="https://formspree.io/f/myzggypw" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+<main>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+    <article>
+        <p>
+            I’m a data engineer with a background in bioinformatics, currently working on building reliable and scalable data pipelines.
+            I enjoy applying engineering best practices to complex problems.
+        </p>
+    </article>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
+    <article>
+        <h2>Projects</h2>
+        <ul>
+            <li>
+                <strong>Data Pipelines:</strong> Developed, tested and maintained ETL workflows in Python to process large-scale financial datasets.
+            </li>
+            <li>
+                <strong>Data Quality & Reporting:</strong> Developed data reconciliation scripts to ensure data quality throughout data pipelines.
+            </li>
+            <li>
+                <strong>Automated Testing:</strong> Developed and integrated with a pytest framework.
+            </li>
+        </ul>
+    </article>
 
-                <input type="submit" value="Submit">
-            </form>
-        </article>
-    </main>
+    <article>
+        <h2>Academic Publication</h2>
+        <h3>A systematic computational analysis of the endosomal recycling pathway in glioblastoma</h3>
+        <p><strong>Authors:</strong> Luke J. Joyce, Andrew J. Lindsay</p>
+
+        <p>
+            <strong>Key takeaway:</strong> Identified an 8-gene prognostic signature linked to survival outcomes in glioblastoma patients.
+        </p>
+
+        <p>
+            <strong>Journal:</strong> Biochemistry and Biophysics Reports<br>
+            <strong>Publication Date:</strong> April 2024
+        </p>
+
+        <p>
+            <a href="https://doi.org/10.1016/j.bbrep.2024.101700" target="_blank">View via DOI</a> |
+            <a href="https://authors.elsevier.com/sd/article/S2405-5808(24)00064-5" target="_blank">Elsevier Link</a>
+        </p>
+    </article>
+
+    <article>
+        <h2>Links</h2>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/joyce-luke">LinkedIn</a></li>
+            <li><a href="https://github.com/lukeJjoyce">GitHub</a></li>
+            <li><a href="https://www.instagram.com/joyce__luke">Instagram</a></li>
+        </ul>
+    </article>
+
+    <article>
+        <h2>Contact</h2>
+        <form action="https://formspree.io/f/myzggypw" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <input type="submit" value="Send message">
+        </form>
+    </article>
+
+</main>
 </body>
 </html>
