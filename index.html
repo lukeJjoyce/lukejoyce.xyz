@@ -1,192 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- SEO -->
-    <title>Luke Joyce | Data Engineer</title>
-    <meta name="description" content="Luke Joyce — Data engineer with a background in bioinformatics, working at Bank of Ireland." />
-    <meta name="keywords" content="Data Engineer, Bioinformatics, Healthcare Data, Python, ETL, SQL" />
+  <title>Luke Joyce | Data Engineer</title>
+  <meta name="description" content="Luke Joyce — Data engineer with a background in bioinformatics, specialising in healthcare and life sciences data." />
+  <meta name="keywords" content="Data Engineer, Bioinformatics, Healthcare Data, Python, ETL, SQL" />
 
-    <!-- Open Graph (LinkedIn previews) -->
-    <meta property="og:title" content="Luke Joyce — Data Engineer" />
-    <meta property="og:description" content="Data engineer with a background in bioinformatics." />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Luke Joyce — Data Engineer" />
+  <meta property="og:description" content="Data engineer with a background in bioinformatics and healthcare data." />
 
-    <link rel="stylesheet" type="text/css" href="main.css" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
-    <style>
-        body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
+  <style>
+    /* =====================
+       Base layout & theme
+       ===================== */
 
-        header {
-            text-align: center;
-            padding: 40px 20px 20px;
-        }
+    body {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 16px;
+      line-height: 1.65;
 
-        h1 {
-            margin-bottom: 5px;
-        }
+      color: #eaeaea;
+      background-color: #000;
 
-        h2 {
-            margin-top: 40px;
-        }
+      margin: 0;
+      padding: 1.25rem;
+    }
 
-        .tagline {
-            font-weight: 500;
-            color: #555;
-        }
+    main {
+      max-width: 48rem;
+      margin: 0 auto;
+    }
 
-        main {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+    /* =====================
+       Typography
+       ===================== */
 
-        article {
-            margin-bottom: 30px;
-        }
+    h1, h2, h3 {
+      line-height: 1.3;
+      margin-top: 2.25rem;
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+    }
 
-        ul {
-            padding-left: 20px;
-        }
+    h1 {
+      font-size: 2rem;
+      margin-top: 1.5rem;
+    }
 
-        .profile-photo {
-            display: block;
-            max-width: 180px;
-            height: auto;
-            border-radius: 50%;
-            margin: 0 auto 20px;
-        }
+    h2 {
+      font-size: 1.4rem;
+    }
 
-        /* Form styling */
-        form {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-        }
+    h3 {
+      font-size: 1.1rem;
+    }
 
-        form label {
-            display: block;
-            margin-bottom: 6px;
-            font-weight: 600;
-        }
+    p {
+      margin-bottom: 1rem;
+    }
 
-        form input,
-        form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 12px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 16px;
-            box-sizing: border-box;
-        }
+    ul {
+      padding-left: 1.25rem;
+    }
 
-        form input[type="submit"] {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            font-weight: 600;
-        }
+    li {
+      margin-bottom: 0.5rem;
+    }
 
-        form input[type="submit"]:hover {
-            background-color: #0056b3;
-        }
+    /* =====================
+       Header
+       ===================== */
 
-        @media (max-width: 600px) {
-            body {
-                font-size: 16px;
-            }
-        }
-    </style>
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .profile-photo {
+      display: block;
+      max-width: 180px;
+      height: auto;
+      border-radius: 50%;
+      margin: 0 auto 1rem;
+      border: 1px solid #333;
+    }
+
+    .tagline {
+      color: #aaa;
+      font-size: 0.95rem;
+    }
+
+    /* =====================
+       Articles
+       ===================== */
+
+    article {
+      margin-bottom: 2.75rem;
+    }
+
+    /* =====================
+       Links
+       ===================== */
+
+    a {
+      text-decoration: none;
+      border-bottom: 1px solid currentColor;
+    }
+
+    a:link {
+      color: #5fd7ff;
+    }
+
+    a:visited {
+      color: #c678dd;
+    }
+
+    a:hover,
+    a:active {
+      color: #ffd866;
+    }
+
+    /* =====================
+       Forms
+       ===================== */
+
+    label {
+      display: block;
+      margin-bottom: 0.25rem;
+      font-weight: 600;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.6rem;
+      margin-bottom: 1rem;
+
+      font-family: inherit;
+      font-size: 0.95rem;
+
+      color: #eaeaea;
+      background-color: #000;
+
+      border: 1px solid #444;
+      border-radius: 2px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      cursor: pointer;
+      font-weight: 600;
+      border: 1px solid #5fd7ff;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #111;
+      color: #ffd866;
+      border-color: #ffd866;
+    }
+
+    /* =====================
+       Accessibility & polish
+       ===================== */
+
+    :focus {
+      outline: 2px dashed #ffd866;
+      outline-offset: 3px;
+    }
+
+    ::selection {
+      background: #444;
+      color: #fff;
+    }
+
+    /* =====================
+       Mobile tweaks
+       ===================== */
+
+    @media (max-width: 600px) {
+      body {
+        font-size: 15px;
+      }
+
+      h1 {
+        font-size: 1.75rem;
+      }
+    }
+
+    /* =====================
+       Desktop enhancements
+       ===================== */
+
+    @media (min-width: 900px) {
+      main {
+        max-width: 60rem;
+      }
+
+      body {
+        font-size: 17px;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      h2 {
+        font-size: 1.55rem;
+      }
+
+      header {
+        text-align: left;
+        margin-bottom: 2rem;
+      }
+
+      .profile-photo {
+        margin-left: 0;
+      }
+
+      article {
+        margin-bottom: 2rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
+
 <header>
-    <img src="luke_photo.jpeg" alt="Portrait photo of Luke Joyce" class="profile-photo">
-    <h1>Luke Joyce</h1>
-    <p class="tagline">Data Engineer | Bioinformatics Background | Healthcare & Life Sciences</p>
+  <img src="luke_photo.jpeg" alt="Portrait photo of Luke Joyce" class="profile-photo">
+  <h1>Luke Joyce</h1>
+  <p class="tagline">Data Engineer | Bioinformatics Background | Healthcare & Life Sciences</p>
 </header>
 
 <main>
 
-    <article>
-        <p>
-            I’m a data engineer with a background in bioinformatics, currently working on building reliable and scalable data pipelines.
-            I enjoy applying engineering best practices to complex problems.
-        </p>
-    </article>
+  <article>
+    <p>
+      I’m a data engineer with a background in bioinformatics, currently focused on building reliable and scalable data pipelines.
+      I enjoy applying engineering best practices to complex problems in healthcare and life sciences.
+    </p>
+  </article>
 
-    <article>
-        <h2>Projects</h2>
-        <ul>
-            <li>
-                <strong>Data Pipelines:</strong> Developed, tested and maintained ETL workflows in Python to process large-scale financial datasets.
-            </li>
-            <li>
-                <strong>Data Quality & Reporting:</strong> Developed data reconciliation scripts to ensure data quality throughout data pipelines.
-            </li>
-            <li>
-                <strong>Automated Testing:</strong> Developed and integrated with a pytest framework.
-            </li>
-        </ul>
-    </article>
+  <article>
+    <h2>Selected Projects</h2>
+    <ul>
+      <li><strong>Healthcare Data Pipelines:</strong> Python-based ETL workflows processing large-scale biological and clinical datasets.</li>
+      <li><strong>Analytics & Reporting:</strong> Data models and aggregations supporting downstream analytics.</li>
+      <li><strong>Research Data Engineering:</strong> Translating research datasets into production-ready pipelines.</li>
+    </ul>
+  </article>
 
-    <article>
-        <h2>Academic Publication</h2>
-        <h3>A systematic computational analysis of the endosomal recycling pathway in glioblastoma</h3>
-        <p><strong>Authors:</strong> Luke J. Joyce, Andrew J. Lindsay</p>
+  <article>
+    <h2>Academic Publication</h2>
+    <h3>A systematic computational analysis of the endosomal recycling pathway in glioblastoma</h3>
 
-        <p>
-            <strong>Key takeaway:</strong> Identified an 8-gene prognostic signature linked to survival outcomes in glioblastoma patients.
-        </p>
+    <p><strong>Authors:</strong> Luke J. Joyce, Andrew J. Lindsay</p>
 
-        <p>
-            <strong>Journal:</strong> Biochemistry and Biophysics Reports<br>
-            <strong>Publication Date:</strong> April 2024
-        </p>
+    <p><strong>Key takeaway:</strong> Identified an 8-gene prognostic signature linked to survival outcomes in glioblastoma.</p>
 
-        <p>
-            <a href="https://doi.org/10.1016/j.bbrep.2024.101700" target="_blank">View via DOI</a> |
-            <a href="https://authors.elsevier.com/sd/article/S2405-5808(24)00064-5" target="_blank">Elsevier Link</a>
-        </p>
-    </article>
+    <p>
+      <strong>Journal:</strong> Biochemistry and Biophysics Reports<br>
+      <strong>Publication Date:</strong> April 2024
+    </p>
 
-    <article>
-        <h2>Links</h2>
-        <ul>
-            <li><a href="https://www.linkedin.com/in/joyce-luke">LinkedIn</a></li>
-            <li><a href="https://github.com/lukeJjoyce">GitHub</a></li>
-            <li><a href="https://www.instagram.com/joyce__luke">Instagram</a></li>
-        </ul>
-    </article>
+    <p>
+      <a href="https://doi.org/10.1016/j.bbrep.2024.101700" target="_blank">DOI</a> |
+      <a href="https://authors.elsevier.com/sd/article/S2405-5808(24)00064-5" target="_blank">Elsevier</a>
+    </p>
+  </article>
 
-    <article>
-        <h2>Contact</h2>
-        <form action="https://formspree.io/f/myzggypw" method="POST">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
+  <article>
+    <h2>Links</h2>
+    <ul>
+      <li><a href="https://www.linkedin.com/in/joyce-luke">LinkedIn</a></li>
+      <li><a href="https://github.com/lukeJjoyce">GitHub</a></li>
+      <li><a href="https://www.instagram.com/joyce__luke">Instagram</a></li>
+    </ul>
+  </article>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+  <article>
+    <h2>Contact</h2>
+    <form action="https://formspree.io/f/myzggypw" method="POST">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
 
-            <input type="submit" value="Send message">
-        </form>
-    </article>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <input type="submit" value="Send message">
+    </form>
+  </article>
 
 </main>
 </body>
