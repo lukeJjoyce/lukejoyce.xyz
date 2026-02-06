@@ -3,22 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <title>Luke Joyce | Data Engineer</title>
-  <meta name="description" content="Luke Joyce — Data engineer with a background in bioinformatics, specialising in healthcare and life sciences data." />
-  <meta name="keywords" content="Data Engineer, Bioinformatics, Healthcare Data, Python, ETL, SQL" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Luke Joyce — Data Engineer" />
-  <meta property="og:description" content="Data engineer with a background in bioinformatics and healthcare data." />
-
+  <meta name="description" content="Luke Joyce — Data engineer with a background in bioinformatics, currently working at Bank of Ireland." />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
   <style>
     /* =====================
        Base layout & theme
        ===================== */
-
     body {
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
       font-size: 16px;
@@ -27,19 +19,16 @@
       color: #eaeaea;
       background-color: #000;
 
-      margin: 0;
-      padding: 1.25rem;
-    }
-
-    main {
       max-width: 48rem;
-      margin: 0 auto;
+      min-width: 16rem;
+      margin: auto;
+      padding: 1.25rem;
+      text-align: center; /* header and inline elements centred by default */
     }
 
     /* =====================
        Typography
        ===================== */
-
     h1, h2, h3 {
       line-height: 1.3;
       margin-top: 2.25rem;
@@ -66,6 +55,7 @@
 
     ul {
       padding-left: 1.25rem;
+      text-align: left; /* list items left-aligned for readability */
     }
 
     li {
@@ -75,9 +65,8 @@
     /* =====================
        Header
        ===================== */
-
     header {
-      text-align: center;
+      text-align: center !important; /* force centring on all screens */
       margin-bottom: 3rem;
     }
 
@@ -86,7 +75,7 @@
       max-width: 180px;
       height: auto;
       border-radius: 50%;
-      margin: 0 auto 1rem;
+      margin: 0 auto 1rem !important; /* force centring */
       border: 1px solid #333;
     }
 
@@ -96,17 +85,20 @@
     }
 
     /* =====================
-       Articles
+       Main content
        ===================== */
+    main {
+      width: 100%;
+    }
 
     article {
       margin-bottom: 2.75rem;
+      text-align: left; /* article text left-aligned */
     }
 
     /* =====================
        Links
        ===================== */
-
     a {
       text-decoration: none;
       border-bottom: 1px solid currentColor;
@@ -128,6 +120,10 @@
     /* =====================
        Forms
        ===================== */
+    form {
+      margin-top: 1rem;
+      text-align: left; /* form inputs left-aligned */
+    }
 
     label {
       display: block;
@@ -167,7 +163,6 @@
     /* =====================
        Accessibility & polish
        ===================== */
-
     :focus {
       outline: 2px dashed #ffd866;
       outline-offset: 3px;
@@ -179,9 +174,8 @@
     }
 
     /* =====================
-       Mobile tweaks
+       Small screens
        ===================== */
-
     @media (max-width: 600px) {
       body {
         font-size: 15px;
@@ -195,10 +189,9 @@
     /* =====================
        Desktop enhancements
        ===================== */
-
     @media (min-width: 900px) {
       main {
-        max-width: 60rem;
+        max-width: 60rem; /* give desktop more room */
       }
 
       body {
@@ -213,24 +206,25 @@
         font-size: 1.55rem;
       }
 
-      header {
-        text-align: left;
+      article {
         margin-bottom: 2rem;
+      }
+
+      /* header centring guaranteed */
+      header {
+        text-align: center !important;
       }
 
       .profile-photo {
-        margin-left: 0;
-      }
-
-      article {
-        margin-bottom: 2rem;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: block;
       }
     }
   </style>
 </head>
 
 <body>
-
 <header>
   <img src="luke_photo.jpeg" alt="Portrait photo of Luke Joyce" class="profile-photo">
   <h1>Luke Joyce</h1>
@@ -238,36 +232,30 @@
 </header>
 
 <main>
-
   <article>
     <p>
       I’m a data engineer with a background in bioinformatics, currently focused on building reliable and scalable data pipelines.
-      I enjoy applying engineering best practices to complex problems in healthcare and life sciences.
+      I enjoy applying engineering best practices to complex problems.
     </p>
   </article>
 
   <article>
     <h2>Selected Projects</h2>
     <ul>
-      <li><strong>Healthcare Data Pipelines:</strong> Python-based ETL workflows processing large-scale biological and clinical datasets.</li>
-      <li><strong>Analytics & Reporting:</strong> Data models and aggregations supporting downstream analytics.</li>
-      <li><strong>Research Data Engineering:</strong> Translating research datasets into production-ready pipelines.</li>
+      <li><strong>ETL Data Pipelines:</strong> Developed, maintained and tested ETL workflows for processing large-scale financial datasets.</li>
+      <li><strong>Data Quality:</strong> Development of reconciliation scripts to ensure record level adherence to design documents.</li>
+      <li><strong>Automated Testing:</strong> Developed a pytest framework for e2e testing.</li>
     </ul>
   </article>
 
   <article>
     <h2>Academic Publication</h2>
     <h3>A systematic computational analysis of the endosomal recycling pathway in glioblastoma</h3>
-
     <p><strong>Authors:</strong> Luke J. Joyce, Andrew J. Lindsay</p>
-
     <p><strong>Key takeaway:</strong> Identified an 8-gene prognostic signature linked to survival outcomes in glioblastoma.</p>
-
-    <p>
-      <strong>Journal:</strong> Biochemistry and Biophysics Reports<br>
-      <strong>Publication Date:</strong> April 2024
+    <p><strong>Journal:</strong> Biochemistry and Biophysics Reports<br>
+       <strong>Publication Date:</strong> April 2024
     </p>
-
     <p>
       <a href="https://doi.org/10.1016/j.bbrep.2024.101700" target="_blank">DOI</a> |
       <a href="https://authors.elsevier.com/sd/article/S2405-5808(24)00064-5" target="_blank">Elsevier</a>
@@ -298,7 +286,6 @@
       <input type="submit" value="Send message">
     </form>
   </article>
-
 </main>
 </body>
 </html>
