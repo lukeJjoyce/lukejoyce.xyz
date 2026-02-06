@@ -14,6 +14,7 @@
     min-width: 16rem;
     margin: auto;
     padding: 1.25rem;
+    text-align: center; /* ensures header and inline elements centre by default */
   }
   
   /* =====================
@@ -46,6 +47,7 @@
   
   ul {
     padding-left: 1.25rem;
+    text-align: left; /* keep list items left-aligned for readability */
   }
   
   li {
@@ -57,7 +59,7 @@
      ===================== */
   
   header {
-    text-align: center; /* header stays centred */
+    text-align: center !important; /* force centring on all screens */
     margin-bottom: 3rem;
   }
   
@@ -66,7 +68,7 @@
     max-width: 180px;
     height: auto;
     border-radius: 50%;
-    margin: 0 auto 1rem; /* centres photo */
+    margin: 0 auto 1rem !important; /* force centring */
     border: 1px solid #333;
   }
   
@@ -85,6 +87,7 @@
   
   article {
     margin-bottom: 2.75rem;
+    text-align: left; /* keep article text left-aligned for readability */
   }
   
   /* =====================
@@ -115,6 +118,7 @@
   
   form {
     margin-top: 1rem;
+    text-align: left; /* form inputs left-aligned */
   }
   
   label {
@@ -190,7 +194,7 @@
     }
   
     body {
-      font-size: 17px; /* slightly larger font for laptops */
+      font-size: 17px;
     }
   
     h1 {
@@ -205,6 +209,15 @@
       margin-bottom: 2rem;
     }
   
-    /* header stays centred, so no overrides here */
+    /* Header centring guaranteed */
+    header {
+      text-align: center !important;
+    }
+  
+    .profile-photo {
+      margin-left: auto !important;
+      margin-right: auto !important;
+      display: block;
+    }
   }
   
